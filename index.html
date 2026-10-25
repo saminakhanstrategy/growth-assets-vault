@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Assets & Conversion Engineering Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        studio: {
+                            950: '#06090E',
+                            900: '#0D131D',
+                            800: '#161F2E',
+                            700: '#222E42',
+                        },
+                        copper: {
+                            400: '#F39C6B',
+                            500: '#E07A4B',
+                            600: '#C2592B',
+                        },
+                        sand: {
+                            100: '#F5F0EB',
+                            200: '#E6DED6',
+                            400: '#BCB1A5',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #06090E; 
+            color: #F5F0EB; 
+        }
+
+        .font-display { font-family: 'Outfit', sans-serif; }
+
+        .copper-gradient-text {
+            background: linear-gradient(135deg, #F5F0EB 0%, #F39C6B 60%, #E07A4B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-studio {
+            background: rgba(13, 19, 29, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(243, 156, 107, 0.18);
+        }
+
+        .btn-copper {
+            background: linear-gradient(135deg, #E07A4B 0%, #C2592B 100%);
+            color: #06090E;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-copper:hover {
+            background: linear-gradient(135deg, #F39C6B 0%, #E07A4B 100%);
+            box-shadow: 0 0 25px rgba(224, 122, 75, 0.4);
+            transform: translateY(-2px);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #06090E; }
+        ::-webkit-scrollbar-thumb { background: #222E42; border-radius: 3px; }
+    </style>
+</head>
+<body class="antialiased selection:bg-copper-400 selection:text-black pb-24">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="border-b border-copper-400/15 bg-studio-950/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-copper-500/15 border border-copper-400/40 flex items-center justify-center text-copper-400">
+                    <i class="fas fa-layer-group text-base"></i>
+                </div>
+                <span class="font-display font-bold text-xl tracking-tight text-sand-100">
+                    Growth Asset Index
+                </span>
+            </div>
+
+            <button onclick="openBookingModal()" class="btn-copper px-5 py-2.5 font-mono text-xs uppercase tracking-wider rounded-xl shadow-lg flex items-center space-x-2">
+                <i class="fas fa-calendar-check text-[11px]"></i>
+                <span>Book Strategy Call ($50)</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-16 space-y-20">
+
+        <!-- HERO SECTION -->
+        <section class="max-w-3xl space-y-5 pt-4">
+            <span class="text-xs font-mono tracking-widest text-copper-400 font-bold uppercase bg-copper-500/10 border border-copper-400/25 px-3 py-1 rounded-full">
+                Conversion & Retention System Modules
+            </span>
+            <h1 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                High-converting e-commerce assets, <span class="copper-gradient-text">built for scale.</span>
+            </h1>
+            <p class="text-sm sm:text-base text-sand-400 font-light leading-relaxed">
+                Review interactive prototypes designed to tackle specific drop-offs in buyer journeys. Book a $50 consultation to walk through implementations tailored to your tech stack.
+            </p>
+        </section>
+
+
+        <!-- ASSET SHOWCASE CARDS GRID -->
+        <div class="space-y-24">
+
+            <!-- 1. DISCOUNT POP-UP BOX -->
+            <article class="glass-studio rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-copper-400/20 shadow-2xl">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-mono text-copper-400 uppercase tracking-widest font-bold">Asset 01</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">The Discount Pop-Up Box</h2>
+                    <p class="text-xs sm:text-sm text-sand-400 font-light leading-relaxed">
+                        Exit-intent triggered overlay with a 2-step collection flow, one-click promo copy reveal, and live real-time style customizers.
+                    </p>
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://saminakhanstrategy.github.io/discount-pop-up-box/" target="_blank" class="px-5 py-3 bg-studio-800 hover:bg-studio-700 text-sand-100 font-mono text-xs font-bold uppercase tracking-wider rounded-xl border border-copper-400/30 transition flex items-center space-x-2">
+                            <span>Launch Live Demo</span>
+                            <i class="fas fa-external-link text-[10px] text-copper-400"></i>
+                        </a>
+                        <button onclick="openBookingModal()" class="text-xs font-mono text-copper-400 hover:text-copper-300 font-bold underline">
+                            Discuss Integration →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-studio-950 rounded-2xl overflow-hidden border border-copper-400/20 shadow-xl">
+                    <div class="bg-studio-900 px-4 py-3 border-b border-copper-400/15 flex items-center justify-between font-mono text-xs text-sand-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                        </div>
+                        <span class="text-[11px] text-sand-400/70">saminakhanstrategy.github.io/discount-pop-up-box/</span>
+                        <i class="fas fa-lock text-[10px] text-emerald-400"></i>
+                    </div>
+                    <div class="relative h-[380px] w-full bg-studio-950">
+                        <iframe src="https://saminakhanstrategy.github.io/discount-pop-up-box/" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- 2. PIN CODE SERVICEABILITY -->
+            <article class="glass-studio rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-copper-400/20 shadow-2xl">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-mono text-copper-400 uppercase tracking-widest font-bold">Asset 02</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Shipping & PIN Code Checker</h2>
+                    <p class="text-xs sm:text-sm text-sand-400 font-light leading-relaxed">
+                        Calculates relative delivery dates on local clocks while using prepaid discounts to migrate buyers away from Cash-on-Delivery RTO losses.
+                    </p>
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://saminakhanstrategy.github.io/pin-code-serviceability/" target="_blank" class="px-5 py-3 bg-studio-800 hover:bg-studio-700 text-sand-100 font-mono text-xs font-bold uppercase tracking-wider rounded-xl border border-copper-400/30 transition flex items-center space-x-2">
+                            <span>Launch Live Demo</span>
+                            <i class="fas fa-external-link text-[10px] text-copper-400"></i>
+                        </a>
+                        <button onclick="openBookingModal()" class="text-xs font-mono text-copper-400 hover:text-copper-300 font-bold underline">
+                            Discuss Integration →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-studio-950 rounded-2xl overflow-hidden border border-copper-400/20 shadow-xl">
+                    <div class="bg-studio-900 px-4 py-3 border-b border-copper-400/15 flex items-center justify-between font-mono text-xs text-sand-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                        </div>
+                        <span class="text-[11px] text-sand-400/70">saminakhanstrategy.github.io/pin-code-serviceability/</span>
+                        <i class="fas fa-lock text-[10px] text-emerald-400"></i>
+                    </div>
+                    <div class="relative h-[380px] w-full bg-studio-950">
+                        <iframe src="https://saminakhanstrategy.github.io/pin-code-serviceability/" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- 3. SUBSCRIPTION & REPEAT DELIVERY BOX -->
+            <article class="glass-studio rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-copper-400/20 shadow-2xl">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-mono text-copper-400 uppercase tracking-widest font-bold">Asset 03</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Subscription & Repeat Delivery Engine</h2>
+                    <p class="text-xs sm:text-sm text-sand-400 font-light leading-relaxed">
+                        Recurring purchase engine with dynamic 15% discount calculations, frequency target scheduling, and in-box product variety swapping.
+                    </p>
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://saminakhanstrategy.github.io/subscription-repeat-delivery-box/" target="_blank" class="px-5 py-3 bg-studio-800 hover:bg-studio-700 text-sand-100 font-mono text-xs font-bold uppercase tracking-wider rounded-xl border border-copper-400/30 transition flex items-center space-x-2">
+                            <span>Launch Live Demo</span>
+                            <i class="fas fa-external-link text-[10px] text-copper-400"></i>
+                        </a>
+                        <button onclick="openBookingModal()" class="text-xs font-mono text-copper-400 hover:text-copper-300 font-bold underline">
+                            Discuss Integration →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-studio-950 rounded-2xl overflow-hidden border border-copper-400/20 shadow-xl">
+                    <div class="bg-studio-900 px-4 py-3 border-b border-copper-400/15 flex items-center justify-between font-mono text-xs text-sand-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                        </div>
+                        <span class="text-[11px] text-sand-400/70">saminakhanstrategy.github.io/subscription-repeat-delivery-box/</span>
+                        <i class="fas fa-lock text-[10px] text-emerald-400"></i>
+                    </div>
+                    <div class="relative h-[380px] w-full bg-studio-950">
+                        <iframe src="https://saminakhanstrategy.github.io/subscription-repeat-delivery-box/" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- 4. POST-PURCHASE ONE-CLICK UPSELL -->
+            <article class="glass-studio rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-copper-400/20 shadow-2xl">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-mono text-copper-400 uppercase tracking-widest font-bold">Asset 04</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Post-Purchase One-Click Upsell</h2>
+                    <p class="text-xs sm:text-sm text-sand-400 font-light leading-relaxed">
+                        Triggers immediately post-payment authorization to increase Average Order Value without forcing customers to re-enter payment details.
+                    </p>
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://saminakhanstrategy.github.io/post-purchase-one-click-upsell/" target="_blank" class="px-5 py-3 bg-studio-800 hover:bg-studio-700 text-sand-100 font-mono text-xs font-bold uppercase tracking-wider rounded-xl border border-copper-400/30 transition flex items-center space-x-2">
+                            <span>Launch Live Demo</span>
+                            <i class="fas fa-external-link text-[10px] text-copper-400"></i>
+                        </a>
+                        <button onclick="openBookingModal()" class="text-xs font-mono text-copper-400 hover:text-copper-300 font-bold underline">
+                            Discuss Integration →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-studio-950 rounded-2xl overflow-hidden border border-copper-400/20 shadow-xl">
+                    <div class="bg-studio-900 px-4 py-3 border-b border-copper-400/15 flex items-center justify-between font-mono text-xs text-sand-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                        </div>
+                        <span class="text-[11px] text-sand-400/70">saminakhanstrategy.github.io/post-purchase-one-click-upsell/</span>
+                        <i class="fas fa-lock text-[10px] text-emerald-400"></i>
+                    </div>
+                    <div class="relative h-[380px] w-full bg-studio-950">
+                        <iframe src="https://saminakhanstrategy.github.io/post-purchase-one-click-upsell/" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- 5. SIZE & FIT RECOMMENDATION MODAL -->
+            <article class="glass-studio rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-copper-400/20 shadow-2xl">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-mono text-copper-400 uppercase tracking-widest font-bold">Asset 05</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Smart Size & Fit Finder</h2>
+                    <p class="text-xs sm:text-sm text-sand-400 font-light leading-relaxed">
+                        A 3-step biometric wizard that calculates body ratios to reduce size-related return rates and automatic multi-size bracketing behavior.
+                    </p>
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://saminakhanstrategy.github.io/size-fit-recommendation-modal/" target="_blank" class="px-5 py-3 bg-studio-800 hover:bg-studio-700 text-sand-100 font-mono text-xs font-bold uppercase tracking-wider rounded-xl border border-copper-400/30 transition flex items-center space-x-2">
+                            <span>Launch Live Demo</span>
+                            <i class="fas fa-external-link text-[10px] text-copper-400"></i>
+                        </a>
+                        <button onclick="openBookingModal()" class="text-xs font-mono text-copper-400 hover:text-copper-300 font-bold underline">
+                            Discuss Integration →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-studio-950 rounded-2xl overflow-hidden border border-copper-400/20 shadow-xl">
+                    <div class="bg-studio-900 px-4 py-3 border-b border-copper-400/15 flex items-center justify-between font-mono text-xs text-sand-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                        </div>
+                        <span class="text-[11px] text-sand-400/70">saminakhanstrategy.github.io/size-fit-recommendation-modal/</span>
+                        <i class="fas fa-lock text-[10px] text-emerald-400"></i>
+                    </div>
+                    <div class="relative h-[380px] w-full bg-studio-950">
+                        <iframe src="https://saminakhanstrategy.github.io/size-fit-recommendation-modal/" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- 6. VIP LOYALTY & REFERRAL PROGRAM -->
+            <article class="glass-studio rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-copper-400/20 shadow-2xl">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-mono text-copper-400 uppercase tracking-widest font-bold">Asset 06</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">VIP Loyalty & Referral Club</h2>
+                    <p class="text-xs sm:text-sm text-sand-400 font-light leading-relaxed">
+                        Multilevel rewards system featuring tier progression, point redemption options, and a "Give $15, Get $15" referral engine for organic acquisition.
+                    </p>
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://saminakhanstrategy.github.io/vip-loyalty-referral-program/" target="_blank" class="px-5 py-3 bg-studio-800 hover:bg-studio-700 text-sand-100 font-mono text-xs font-bold uppercase tracking-wider rounded-xl border border-copper-400/30 transition flex items-center space-x-2">
+                            <span>Launch Live Demo</span>
+                            <i class="fas fa-external-link text-[10px] text-copper-400"></i>
+                        </a>
+                        <button onclick="openBookingModal()" class="text-xs font-mono text-copper-400 hover:text-copper-300 font-bold underline">
+                            Discuss Integration →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-studio-950 rounded-2xl overflow-hidden border border-copper-400/20 shadow-xl">
+                    <div class="bg-studio-900 px-4 py-3 border-b border-copper-400/15 flex items-center justify-between font-mono text-xs text-sand-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                        </div>
+                        <span class="text-[11px] text-sand-400/70">saminakhanstrategy.github.io/vip-loyalty-referral-program/</span>
+                        <i class="fas fa-lock text-[10px] text-emerald-400"></i>
+                    </div>
+                    <div class="relative h-[380px] w-full bg-studio-950">
+                        <iframe src="https://saminakhanstrategy.github.io/vip-loyalty-referral-program/" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- 7. PRODUCT RECOMMENDATION QUIZ -->
+            <article class="glass-studio rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-copper-400/20 shadow-2xl">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-mono text-copper-400 uppercase tracking-widest font-bold">Asset 07</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Diagnostic Product Quiz</h2>
+                    <p class="text-xs sm:text-sm text-sand-400 font-light leading-relaxed">
+                        Guided consultation funnel that diagnoses buyer preferences in under 60 seconds and bundles matched SKUs directly into checkout.
+                    </p>
+                    <div class="pt-2 flex items-center space-x-4">
+                        <a href="https://saminakhanstrategy.github.io/product-recommendation-quiz/" target="_blank" class="px-5 py-3 bg-studio-800 hover:bg-studio-700 text-sand-100 font-mono text-xs font-bold uppercase tracking-wider rounded-xl border border-copper-400/30 transition flex items-center space-x-2">
+                            <span>Launch Live Demo</span>
+                            <i class="fas fa-external-link text-[10px] text-copper-400"></i>
+                        </a>
+                        <button onclick="openBookingModal()" class="text-xs font-mono text-copper-400 hover:text-copper-300 font-bold underline">
+                            Discuss Integration →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-studio-950 rounded-2xl overflow-hidden border border-copper-400/20 shadow-xl">
+                    <div class="bg-studio-900 px-4 py-3 border-b border-copper-400/15 flex items-center justify-between font-mono text-xs text-sand-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                        </div>
+                        <span class="text-[11px] text-sand-400/70">saminakhanstrategy.github.io/product-recommendation-quiz/</span>
+                        <i class="fas fa-lock text-[10px] text-emerald-400"></i>
+                    </div>
+                    <div class="relative h-[380px] w-full bg-studio-950">
+                        <iframe src="https://saminakhanstrategy.github.io/product-recommendation-quiz/" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER CTA -->
+    <footer class="border-t border-copper-400/15 bg-studio-950 py-16 text-center font-sans">
+        <div class="max-w-3xl mx-auto px-6 space-y-5">
+            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Need custom implementation for your store?</h3>
+            <p class="text-xs sm:text-sm text-sand-400 font-light max-w-xl mx-auto">
+                Book a $50 strategy consultation to review live builds, analyze your funnel bottlenecks, and plan custom component integration.
+            </p>
+            <div class="pt-2">
+                <button onclick="openBookingModal()" class="btn-copper px-7 py-3.5 text-xs font-mono uppercase tracking-widest rounded-xl shadow-xl">
+                    Book Strategy Call ($50) →
+                </button>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- $50 PAID STRATEGY CALL MODAL -->
+    <div id="bookingModal" class="fixed inset-0 z-50 bg-studio-950/85 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition duration-300">
+        <div class="glass-studio w-full max-w-lg rounded-3xl p-6 sm:p-8 space-y-5 border border-copper-400/30 relative shadow-2xl">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-sand-400 hover:text-white text-lg transition">
+                <i class="fas fa-xmark"></i>
+            </button>
+
+            <div class="space-y-1 text-center">
+                <h3 class="font-display text-2xl font-bold text-white">Book Strategy Call ($50)</h3>
+                <p class="text-xs text-sand-400 font-light">
+                    Select the modules you want to review for your brand during our consultation.
+                </p>
+            </div>
+
+            <form onsubmit="handleBookingSubmit(event)" class="space-y-4 font-mono text-xs">
+                <div class="space-y-1">
+                    <label class="text-sand-400 uppercase tracking-wider block">Your Name</label>
+                    <input type="text" required placeholder="Full Name" class="w-full bg-studio-950 border border-copper-400/20 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-copper-400">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-sand-400 uppercase tracking-wider block">Email Address</label>
+                    <input type="email" required placeholder="name@brand.com" class="w-full bg-studio-950 border border-copper-400/20 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-copper-400">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-sand-400 uppercase tracking-wider block">Store URL</label>
+                    <input type="text" required placeholder="https://yourbrand.com" class="w-full bg-studio-950 border border-copper-400/20 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-copper-400">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-sand-400 uppercase tracking-wider block">Target Asset</label>
+                    <select class="w-full bg-studio-950 border border-copper-400/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-copper-400">
+                        <option>01. Discount Pop-Up Box</option>
+                        <option>02. Shipping & PIN Code Checker</option>
+                        <option>03. Subscription & Repeat Delivery Engine</option>
+                        <option>04. Post-Purchase One-Click Upsell</option>
+                        <option>05. Smart Size & Fit Finder</option>
+                        <option>06. VIP Loyalty & Referral Club</option>
+                        <option>07. Diagnostic Product Quiz</option>
+                        <option>Multiple / Full Funnel Audit</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-copper w-full py-3.5 text-xs font-mono uppercase tracking-widest rounded-xl shadow-xl mt-2">
+                    Proceed to $50 Consultation Booking →
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        function openBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            alert('Redirecting to checkout and calendar booking portal...');
+            closeBookingModal();
+        }
+    </script>
+</body>
+</html>
